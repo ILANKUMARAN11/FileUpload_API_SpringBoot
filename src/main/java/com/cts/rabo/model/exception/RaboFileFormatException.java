@@ -1,12 +1,12 @@
 package com.cts.rabo.model.exception;
 
-public class InvalidFileException extends RuntimeException {
+public class RaboFileFormatException extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;
 
 	private int status;
 
-	public InvalidFileException(String exceptionMeassage) {
+	public RaboFileFormatException(String exceptionMeassage) {
 		super(exceptionMeassage);
 	}
 

@@ -21,7 +21,7 @@ import com.cts.rabo.model.Records;
 import com.cts.rabo.model.StatementRecords;
 import com.cts.rabo.model.StatementResponse;
 import com.cts.rabo.model.XmlReport;
-import com.cts.rabo.model.exception.InvalidFileException;
+import com.cts.rabo.model.exception.RaboFileFormatException;
 import com.cts.rabo.model.exception.RaboRuntimeException;
 import com.cts.rabo.service.util.ValidatorService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -68,7 +68,7 @@ public class FileParsingServiceImpl implements FileParsingService {
 				statementResponse.setCsvReport(parsingCSV(crvList));
 			}
 		}else {
-			throw new InvalidFileException("Invalid file Content-Type format");
+			throw new RaboFileFormatException("Invalid file Content-Type format");
 		}
 
 		return statementResponse;
@@ -98,14 +98,12 @@ public class FileParsingServiceImpl implements FileParsingService {
 						records = objectMapper.readValue(p.getInputStream(), Records.class);
 					} catch (IOException e) {
 						LOGGER.error(e.getMessage(), e);
-
 						RaboRuntimeException rabo = new RaboRuntimeException(RaboConstants.fileIo);
 						rabo.setStatus(RaboConstants.fileIoCode);
 						throw rabo;
 					}
 
 					statemnets = Arrays.asList(records.getStatementRecords());
-
 					XmlReport xmlReport = new XmlReport();
 					xmlReport.setFileName(p.getOriginalFilename());
 					xmlReport.setDuplicateRef(validatorService.extractDupicateRef(statemnets));
@@ -125,7 +123,7 @@ public class FileParsingServiceImpl implements FileParsingService {
 	 * @param crvList List of CSV files parsing.
 	 * @return Duplicate reference and invalid end balance from CSV.
 	 */
-	public List<CsvReport> parsingCSV(List<MultipartFile> crvList) throws RaboRuntimeException{
+	public List<CsvReport> parsingCSV(List<MultipartFile> crvList){
 
 		LOGGER.debug("processing inside CSV parsing service");
 

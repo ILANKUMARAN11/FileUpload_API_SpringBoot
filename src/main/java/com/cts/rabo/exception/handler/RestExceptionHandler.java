@@ -10,17 +10,16 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import com.cts.rabo.constants.RaboConstants;
 import com.cts.rabo.model.exception.ApiErrorResponse;
-import com.cts.rabo.model.exception.InvalidFileException;
+import com.cts.rabo.model.exception.RaboFileFormatException;
 import com.cts.rabo.model.exception.RaboRuntimeException;
 
 @RestControllerAdvice
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
 
-	
 	@ResponseStatus(value=HttpStatus.FORBIDDEN)
-	@ExceptionHandler(InvalidFileException.class)
-	public ResponseEntity<ApiErrorResponse> invalidFileException(InvalidFileException e,WebRequest request) {
+	@ExceptionHandler(RaboFileFormatException.class)
+	public ResponseEntity<ApiErrorResponse> invalidFileException(RaboFileFormatException e,WebRequest request) {
 		ApiErrorResponse apiErrorResponse=new ApiErrorResponse();
 		apiErrorResponse.setMessage(e.getMessage());
 		apiErrorResponse.setError(RaboConstants.fileFormatMsg);

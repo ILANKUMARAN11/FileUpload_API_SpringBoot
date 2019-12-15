@@ -1,6 +1,6 @@
 package com.cts.rabo.exception;
 
-import com.cts.rabo.model.exception.InvalidFileException;
+import com.cts.rabo.model.exception.RaboFileFormatException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,7 +27,7 @@ public class ControllerAdviseTest {
 	@Test
 	public void invalidFileExceptionTest() {
 
-		ResponseEntity<ApiErrorResponse> rabo=restExceptionHandler.invalidFileException(new InvalidFileException("Test"), request);
+		ResponseEntity<ApiErrorResponse> rabo=restExceptionHandler.invalidFileException(new RaboFileFormatException("Test"), request);
 		Assert.assertTrue(rabo.getBody().getMessage().equals("Test"));
 	}
 

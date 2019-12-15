@@ -21,7 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.cts.rabo.function.ParsingExpression;
 import com.cts.rabo.model.CsvReport;
 import com.cts.rabo.model.StatementResponse;
-import com.cts.rabo.model.exception.InvalidFileException;
+import com.cts.rabo.model.exception.RaboFileFormatException;
 import com.cts.rabo.model.exception.RaboRuntimeException;
 import com.cts.rabo.service.FileParsingServiceImpl;
 
@@ -63,7 +63,7 @@ public class FileParsingNegativeTest {
 //
 //	}
 	
-	@Test(expected = InvalidFileException.class)
+	@Test(expected = RaboFileFormatException.class)
 	public void divideFileTypeTest() throws Exception {
 
 
