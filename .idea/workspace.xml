@@ -2,19 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21885229-b22b-486c-b8a5-024ee43bc6f8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readMe.docx" beforeDir="false" afterPath="$PROJECT_DIR$/readMe.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cts/rabo/RabobankApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cts/rabo/RabobankApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cts/rabo/constants/RaboConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cts/rabo/constants/RaboConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cts/rabo/controller/Statementcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cts/rabo/controller/Statementcontroller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cts/rabo/exception/handler/RestExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cts/rabo/exception/handler/RestExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cts/rabo/model/exception/InvalidFileException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cts/rabo/model/exception/RaboFileFormatException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cts/rabo/function/ParsingExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cts/rabo/function/ParsingExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cts/rabo/function/VoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cts/rabo/function/VoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cts/rabo/model/CsvReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cts/rabo/model/CsvReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cts/rabo/model/Records.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cts/rabo/model/Records.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cts/rabo/model/StatementRecords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cts/rabo/model/StatementRecords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cts/rabo/model/StatementResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cts/rabo/model/StatementResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cts/rabo/model/Statements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cts/rabo/model/Statements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cts/rabo/model/XmlReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cts/rabo/model/XmlReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cts/rabo/model/exception/ApiErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cts/rabo/model/exception/ApiErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cts/rabo/model/exception/RaboFileFormatException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cts/rabo/model/exception/RaboFileFormatException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cts/rabo/model/exception/RaboRuntimeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cts/rabo/model/exception/RaboRuntimeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cts/rabo/service/FileParsingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cts/rabo/service/FileParsingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cts/rabo/service/FileParsingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cts/rabo/service/FileParsingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cts/rabo/exception/ControllerAdviseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cts/rabo/exception/ControllerAdviseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cts/rabo/service/util/FileParsingNegativeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cts/rabo/service/util/FileParsingNegativeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cts/rabo/exception/ControllerAdviseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/cts/rabo/exception/ControllerAdviseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cts/rabo/service/util/FileParsingNegativeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/cts/rabo/service/util/FileParsingNegativeTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cts/rabo/service/util/ValidatorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cts/rabo/service/util/ValidatorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cts/rabo/service/util/ValidatorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cts/rabo/service/util/ValidatorServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cts/rabo/controller/StatementcontrollerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/cts/rabo/controller/StatementcontrollerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cts/rabo/service/util/ValidatorServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/cts/rabo/service/util/ValidatorServiceTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cts/rabo/RabobankApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,8 +57,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="139" column="4" selection-start-line="139" selection-start-column="4" selection-end-line="139" selection-end-column="4" />
+            <state relative-caret-position="2145">
+              <caret line="143" column="12" selection-start-line="143" selection-start-column="12" selection-end-line="143" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -234,11 +247,26 @@
       <option name="project" value="LOCAL" />
       <updated>1576406304425</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="readMe file">
+      <created>1576409716835</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576409716835</updated>
+    </task>
+    <task id="LOCAL-00003" summary="readMe file">
+      <created>1576409761226</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1576409761226</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="812" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -274,7 +302,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="plugin changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="plugin changes" />
+    <MESSAGE value="readMe file" />
+    <option name="LAST_COMMIT_MESSAGE" value="readMe file" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cts/rabo/RabobankApplication.java">
@@ -321,7 +350,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cts/rabo/RabobankApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -330,8 +359,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="139" column="4" selection-start-line="139" selection-start-column="4" selection-end-line="139" selection-end-column="4" />
+        <state relative-caret-position="2145">
+          <caret line="143" column="12" selection-start-line="143" selection-start-column="12" selection-end-line="143" selection-end-column="12" />
         </state>
       </provider>
     </entry>

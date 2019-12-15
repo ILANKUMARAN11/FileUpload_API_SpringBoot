@@ -28,6 +28,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.opencsv.CSVReader;
 
+/**
+ * 
+ * @author ilankumaran
+ *
+ */
 @Service
 public class FileParsingServiceImpl implements FileParsingService {
 
@@ -38,7 +43,7 @@ public class FileParsingServiceImpl implements FileParsingService {
 
 	/**
 	 * 
-	 * @param multipartFiles Splitting XML and CSV. 
+	 * @param multipartFiles Splitting XML and CSV.
 	 * @return Duplicate reference and invalid end balance from XML and CSV.
 	 */
 	@Override
@@ -67,7 +72,7 @@ public class FileParsingServiceImpl implements FileParsingService {
 			if (crvList != null && !crvList.isEmpty()) {
 				statementResponse.setCsvReport(parsingCSV(crvList));
 			}
-		}else {
+		} else {
 			throw new RaboFileFormatException("Invalid file Content-Type format");
 		}
 
@@ -123,12 +128,12 @@ public class FileParsingServiceImpl implements FileParsingService {
 	 * @param crvList List of CSV files parsing.
 	 * @return Duplicate reference and invalid end balance from CSV.
 	 */
-	public List<CsvReport> parsingCSV(List<MultipartFile> crvList){
+	public List<CsvReport> parsingCSV(List<MultipartFile> crvList) {
 
 		LOGGER.debug("processing inside CSV parsing service");
 
 		ParsingExpression<List<MultipartFile>, List<CsvReport>> parsing = new ParsingExpression<List<MultipartFile>, List<CsvReport>>() {
-		
+
 			@Override
 			public List<CsvReport> action(List<MultipartFile> t) throws RaboRuntimeException {
 				return t.stream().map(j -> {

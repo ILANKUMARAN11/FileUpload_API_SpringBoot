@@ -2,14 +2,19 @@ package com.cts.rabo.model.exception;
 
 import org.springframework.http.HttpStatus;
 
+/**
+ * 
+ * @author ilankumaran
+ *
+ */
 public class ApiErrorResponse {
 
- 
-    private String message;
-    private HttpStatus status;
-    private String error;
+	private String message;
+	private HttpStatus status;
+	private String error;
 
-    public ApiErrorResponse() {}
+	public ApiErrorResponse() {
+	}
 
 	public String getMessage() {
 		return message;
@@ -34,9 +39,5 @@ public class ApiErrorResponse {
 	public void setError(String error) {
 		this.error = error;
 	}
-
-
-    
-	
 
 }

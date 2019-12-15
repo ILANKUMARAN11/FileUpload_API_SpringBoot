@@ -5,6 +5,11 @@ import java.util.List;
 import com.cts.rabo.model.StatementRecords;
 import com.cts.rabo.model.Statements;
 
+/**
+ * 
+ * @author ilankumaran
+ *
+ */
 public interface ValidatorService {
 	/**
 	 * 
@@ -12,7 +17,7 @@ public interface ValidatorService {
 	 * @return Extracting Duplicate Reference ID .
 	 */
 	List<Statements> extractDupicateRef(List<StatementRecords> statemnets);
-	
+
 	/**
 	 * 
 	 * @param statemnets List of all Transaction records.

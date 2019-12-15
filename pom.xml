@@ -78,7 +78,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.7.9</version>
@@ -103,16 +103,16 @@
 							<goal>report</goal>
 						</goals>
 						<configuration>
-							<!-- Sets the path to the file which contains the execution data. -->
+							Sets the path to the file which contains the execution data.
 
 							<dataFile>target/jacoco.exec</dataFile>
-							<!-- Sets the output directory for the code coverage report. -->
+							Sets the output directory for the code coverage report.
 							<outputDirectory>target/jacoco-ut</outputDirectory>
 						</configuration>
 					</execution>
 				</executions>
 
-			</plugin>
+			</plugin> -->
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -136,9 +136,9 @@
 		<java.version>1.8</java.version>
 	</properties>
 
-	
-	
-	<profiles>
+
+
+	<!-- <profiles>
 		<profile>
 			<id>sonar</id>
 			<activation>
@@ -170,6 +170,6 @@
 
 		</profile>
 
-	</profiles>
+	</profiles> -->
 
 </project>

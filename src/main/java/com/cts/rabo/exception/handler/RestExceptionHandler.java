@@ -13,39 +13,62 @@ import com.cts.rabo.model.exception.ApiErrorResponse;
 import com.cts.rabo.model.exception.RaboFileFormatException;
 import com.cts.rabo.model.exception.RaboRuntimeException;
 
+/**
+ * 
+ * @author ilankumaran
+ *
+ * Custom response handler when exception occurs.
+ */
 @RestControllerAdvice
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
-
-	@ResponseStatus(value=HttpStatus.FORBIDDEN)
+	/**
+	 * 
+	 * @param e       Exception file other than CSV and XML.
+	 * @param request Http request parameter.
+	 * @return API response for file other than CSV and XML.
+	 */
+	@ResponseStatus(value = HttpStatus.FORBIDDEN)
 	@ExceptionHandler(RaboFileFormatException.class)
-	public ResponseEntity<ApiErrorResponse> invalidFileException(RaboFileFormatException e,WebRequest request) {
-		ApiErrorResponse apiErrorResponse=new ApiErrorResponse();
+	public ResponseEntity<ApiErrorResponse> invalidFileException(RaboFileFormatException e, WebRequest request) {
+		ApiErrorResponse apiErrorResponse = new ApiErrorResponse();
 		apiErrorResponse.setMessage(e.getMessage());
 		apiErrorResponse.setError(RaboConstants.fileFormatMsg);
 		apiErrorResponse.setStatus(HttpStatus.FORBIDDEN);
-		return new ResponseEntity<ApiErrorResponse>(apiErrorResponse,HttpStatus.OK);
+		return new ResponseEntity<ApiErrorResponse>(apiErrorResponse, HttpStatus.OK);
 	}
-	
-	@ResponseStatus(value=HttpStatus.FORBIDDEN)
+
+	/**
+	 * 
+	 * @param e       Exception for IO exception handler.
+	 * @param request request Http request parameter.
+	 * @return API response IO Exception.
+	 */
+	@ResponseStatus(value = HttpStatus.FORBIDDEN)
 	@ExceptionHandler(RaboRuntimeException.class)
-	public ResponseEntity<ApiErrorResponse> raboException(RaboRuntimeException e,WebRequest request) {
-		ApiErrorResponse apiErrorResponse=new ApiErrorResponse();
+	public ResponseEntity<ApiErrorResponse> raboException(RaboRuntimeException e, WebRequest request) {
+		ApiErrorResponse apiErrorResponse = new ApiErrorResponse();
 		apiErrorResponse.setMessage(e.getMessage());
 		apiErrorResponse.setError(RaboConstants.fileParsingMsg);
 		apiErrorResponse.setStatus(HttpStatus.FORBIDDEN);
-		return new ResponseEntity<ApiErrorResponse>(apiErrorResponse,HttpStatus.OK);
+		return new ResponseEntity<ApiErrorResponse>(apiErrorResponse, HttpStatus.OK);
 	}
-	
-	
-	@ResponseStatus(value=HttpStatus.INTERNAL_SERVER_ERROR)
+
+	/**
+	 * 
+	 * @param e       Global(any) exception handler.
+	 * @param request Http request parameter.
+	 * @return API response any other than RaboRuntimeException and
+	 *         RaboFileFormatException.
+	 */
+	@ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
 	@ExceptionHandler(Exception.class)
-	public ResponseEntity<ApiErrorResponse> globalException(Throwable e,WebRequest request) {
-		ApiErrorResponse apiErrorResponse=new ApiErrorResponse();
+	public ResponseEntity<ApiErrorResponse> globalException(Throwable e, WebRequest request) {
+		ApiErrorResponse apiErrorResponse = new ApiErrorResponse();
 		apiErrorResponse.setMessage(e.getMessage());
 		apiErrorResponse.setError(RaboConstants.unExpectedMsg);
 		apiErrorResponse.setStatus(HttpStatus.INTERNAL_SERVER_ERROR);
-		return new ResponseEntity<ApiErrorResponse>(apiErrorResponse,HttpStatus.OK);
+		return new ResponseEntity<ApiErrorResponse>(apiErrorResponse, HttpStatus.OK);
 	}
 
 }

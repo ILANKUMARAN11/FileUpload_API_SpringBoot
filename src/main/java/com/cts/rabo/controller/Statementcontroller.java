@@ -16,6 +16,12 @@ import org.springframework.web.multipart.MultipartFile;
 import com.cts.rabo.model.StatementResponse;
 import com.cts.rabo.service.FileParsingService;
 
+/**
+ * 
+ * @author ilankumaran
+ * 
+ * Multiple file format input
+ */
 @RestController
 @RequestMapping("/customer")
 public class Statementcontroller {
@@ -28,12 +34,13 @@ public class Statementcontroller {
 	/**
 	 * 
 	 * @param files List of multiple XML or CSV files as input to API.
-	 * @return Duplicate reference number and invalid end balance Report as Response.
+	 * @return Duplicate reference number and invalid end balance Report as
+	 *         Response.
 	 */
 	@PostMapping(value = "/multi/statements/record.rabo", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 	public ResponseEntity<StatementResponse> uploadMultipleFiles(@RequestParam("files") List<MultipartFile> files) {
-		
-		LOGGER.debug("processing inside Controller"); 
+
+		LOGGER.debug("processing inside Controller");
 
 		return ResponseEntity.ok(fileParsingService.divideFileType(files));
 	}

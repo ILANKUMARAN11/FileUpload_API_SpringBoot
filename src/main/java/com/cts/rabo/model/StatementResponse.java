@@ -6,14 +6,20 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * 
+ * @author ilankumaran
+ *
+ */
 @JsonInclude(Include.NON_NULL)
 public class StatementResponse {
-	
+
 	private List<CsvReport> csvReport;
-	
+
 	private List<XmlReport> xmlReport;
-	
-	public StatementResponse(){}
+
+	public StatementResponse() {
+	}
 
 	@JsonProperty("CSV Reports")
 	public List<CsvReport> getCsvReport() {
@@ -32,12 +38,5 @@ public class StatementResponse {
 	public void setXmlReport(List<XmlReport> xmlReport) {
 		this.xmlReport = xmlReport;
 	}
-
-	
-	
-	
-	
-	
-	
 
 }

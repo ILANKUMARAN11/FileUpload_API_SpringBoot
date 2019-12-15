@@ -9,6 +9,11 @@ import com.cts.rabo.model.StatementResponse;
 import com.cts.rabo.model.XmlReport;
 
 
+/**
+ * 
+ * @author ilankumaran
+ *
+ */
 public interface FileParsingService {
 	
 	/**

@@ -1,5 +1,10 @@
 package com.cts.rabo.model.exception;
 
+/**
+ * 
+ * @author ilankumaran
+ *
+ */
 public class RaboFileFormatException extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;

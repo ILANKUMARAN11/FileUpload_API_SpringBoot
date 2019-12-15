@@ -5,6 +5,11 @@ import java.util.function.Function;
 import com.cts.rabo.model.StatementRecords;
 import com.cts.rabo.model.Statements;
 
+/**
+ * 
+ * @author ilankumaran
+ *
+ */
 public class VoMapper {
 
 	/**

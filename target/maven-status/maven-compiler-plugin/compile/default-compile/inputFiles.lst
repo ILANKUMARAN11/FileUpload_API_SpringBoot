@@ -2,7 +2,6 @@
 /ILAN/WorkSpace/STS_WorkSpace/rabobank/src/main/java/com/cts/rabo/constants/RaboConstants.java
 /ILAN/WorkSpace/STS_WorkSpace/rabobank/src/main/java/com/cts/rabo/model/exception/RaboRuntimeException.java
 /ILAN/WorkSpace/STS_WorkSpace/rabobank/src/main/java/com/cts/rabo/model/StatementRecords.java
-/ILAN/WorkSpace/STS_WorkSpace/rabobank/src/main/java/com/cts/rabo/model/exception/InvalidFileException.java
 /ILAN/WorkSpace/STS_WorkSpace/rabobank/src/main/java/com/cts/rabo/service/util/ValidatorServiceImpl.java
 /ILAN/WorkSpace/STS_WorkSpace/rabobank/src/main/java/com/cts/rabo/RabobankApplication.java
 /ILAN/WorkSpace/STS_WorkSpace/rabobank/src/main/java/com/cts/rabo/controller/Statementcontroller.java
@@ -15,5 +14,6 @@
 /ILAN/WorkSpace/STS_WorkSpace/rabobank/src/main/java/com/cts/rabo/model/Records.java
 /ILAN/WorkSpace/STS_WorkSpace/rabobank/src/main/java/com/cts/rabo/service/util/ValidatorService.java
 /ILAN/WorkSpace/STS_WorkSpace/rabobank/src/main/java/com/cts/rabo/model/exception/ApiErrorResponse.java
+/ILAN/WorkSpace/STS_WorkSpace/rabobank/src/main/java/com/cts/rabo/model/exception/RaboFileFormatException.java
 /ILAN/WorkSpace/STS_WorkSpace/rabobank/src/main/java/com/cts/rabo/exception/handler/RestExceptionHandler.java
 /ILAN/WorkSpace/STS_WorkSpace/rabobank/src/main/java/com/cts/rabo/service/FileParsingServiceImpl.java

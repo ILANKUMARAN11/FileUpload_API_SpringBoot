@@ -4,38 +4,43 @@ import java.math.BigDecimal;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
+/**
+ * 
+ * @author ilankumaran
+ *
+ */
 public class StatementRecords {
-	
-	
+
 	@JacksonXmlProperty(localName = "reference", isAttribute = true)
 	private BigDecimal refrence;
-	
+
 	@JacksonXmlProperty(localName = "accountNumber")
 	private String accountNo;
-	
+
 	@JacksonXmlProperty(localName = "description")
 	private String description;
-	
+
 	@JacksonXmlProperty(localName = "startBalance")
 	private Double startBalance;
-	
+
 	@JacksonXmlProperty(localName = "mutation")
 	private Double mutation;
-	
+
 	@JacksonXmlProperty(localName = "endBalance")
 	private Double endBalance;
-	
-	
-	public StatementRecords(BigDecimal refrence,String accountNo,String description,Double startBalance,Double mutation,Double endBalance){
-		this.refrence=refrence;
-		this.accountNo=accountNo;
-		this.description=description;
-		this.startBalance=startBalance;
-		this.mutation=mutation;
-		this.endBalance=endBalance;
+
+	public StatementRecords(BigDecimal refrence, String accountNo, String description, Double startBalance,
+			Double mutation, Double endBalance) {
+		this.refrence = refrence;
+		this.accountNo = accountNo;
+		this.description = description;
+		this.startBalance = startBalance;
+		this.mutation = mutation;
+		this.endBalance = endBalance;
 	}
-	
-	public StatementRecords(){}
+
+	public StatementRecords() {
+	}
 
 	public BigDecimal getRefrence() {
 		return refrence;
@@ -85,11 +90,9 @@ public class StatementRecords {
 		this.endBalance = endBalance;
 	}
 
-	
 	public String toString() {
-		return this.refrence+" , "+this.accountNo+" , "+this.description+" , "+this.startBalance+" , "+this.mutation+" , "+this.endBalance;
+		return this.refrence + " , " + this.accountNo + " , " + this.description + " , " + this.startBalance + " , "
+				+ this.mutation + " , " + this.endBalance;
 	}
-	
-	
 
 }

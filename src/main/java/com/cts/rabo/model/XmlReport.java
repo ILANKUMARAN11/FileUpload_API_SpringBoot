@@ -6,24 +6,26 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * 
+ * @author ilankumaran
+ *
+ */
 @JsonInclude(Include.NON_NULL)
 public class XmlReport {
-	
-	
-	
-	@JsonInclude(Include.NON_EMPTY)	
+
+	@JsonInclude(Include.NON_EMPTY)
 	private String fileName;
-	
-	
-	@JsonInclude(Include.NON_EMPTY)	
+
+	@JsonInclude(Include.NON_EMPTY)
 	private List<Statements> duplicateRef;
-	
-	@JsonInclude(Include.NON_EMPTY)	
+
+	@JsonInclude(Include.NON_EMPTY)
 	private List<Statements> invalidEndBanlance;
-	
-	public XmlReport() {}
-	
-	
+
+	public XmlReport() {
+	}
+
 	@JsonProperty("File Name")
 	public String getFileName() {
 		return fileName;
@@ -50,7 +52,5 @@ public class XmlReport {
 	public void setInvalidEndBanlance(List<Statements> invalidEndBanlance) {
 		this.invalidEndBanlance = invalidEndBanlance;
 	}
-	
-	
 
 }

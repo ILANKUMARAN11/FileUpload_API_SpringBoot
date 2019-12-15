@@ -14,9 +14,9 @@ com/cts/rabo/function/VoMapper.class
 com/cts/rabo/constants/RaboConstants.class
 com/cts/rabo/model/Statements.class
 com/cts/rabo/service/FileParsingService.class
+com/cts/rabo/model/exception/RaboFileFormatException.class
 com/cts/rabo/model/Records.class
 com/cts/rabo/function/ParsingExpression.class
-com/cts/rabo/model/exception/InvalidFileException.class
 com/cts/rabo/service/FileParsingServiceImpl$2.class
 com/cts/rabo/model/XmlReport.class
 com/cts/rabo/model/CsvReport.class
