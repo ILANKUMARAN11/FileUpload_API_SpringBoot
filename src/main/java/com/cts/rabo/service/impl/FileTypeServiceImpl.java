@@ -74,7 +74,6 @@ public class FileTypeServiceImpl implements FileTypeService {
 		}
 
 		return reports;
-
 	}
 
 }
