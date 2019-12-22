@@ -14,7 +14,6 @@ import com.cts.rabo.model.Reports;
  */
 public interface FileParsingService {
 
-
 	/**
 	 * 
 	 * @param xmlLst List of MultiPart File as xmlList.

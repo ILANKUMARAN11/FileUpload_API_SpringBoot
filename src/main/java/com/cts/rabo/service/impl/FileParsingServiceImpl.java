@@ -40,7 +40,6 @@ public class FileParsingServiceImpl implements FileParsingService {
 	@Autowired
 	ValidatorService validatorService;
 
-
 	/**
 	 * 
 	 * @param xmlLst List of MultiPart File as xmlList.
@@ -52,6 +51,7 @@ public class FileParsingServiceImpl implements FileParsingService {
 
 		ParsingExpression<List<MultipartFile>, Optional<Reports>> parsing = new ParsingExpression<List<MultipartFile>, Optional<Reports>>() {
 			Reports xmlReports = new Reports();
+
 			@Override
 			public Optional<Reports> action(List<MultipartFile> t) throws RaboRuntimeException {
 				return t.stream().map(p -> {
@@ -64,7 +64,7 @@ public class FileParsingServiceImpl implements FileParsingService {
 						records = objectMapper.readValue(p.getInputStream(), Records.class);
 					} catch (IOException e) {
 						logger.error(e.getMessage(), e);
-						throw new RaboRuntimeException(RaboConstants.FILE_IO,RaboConstants.FILE_IO_CODE);
+						throw new RaboRuntimeException(RaboConstants.FILE_IO, RaboConstants.FILE_IO_CODE);
 					}
 
 					statemnets = Arrays.asList(records.getStatementRecords());
@@ -75,10 +75,10 @@ public class FileParsingServiceImpl implements FileParsingService {
 				}).findFirst();
 			}
 		};
-		Optional<Reports> optionalReports=parsing.action(xmlLst);
+		Optional<Reports> optionalReports = parsing.action(xmlLst);
 		if (optionalReports.isPresent()) {
 			xmlReports = Optional.ofNullable(optionalReports.get());
-		}else {
+		} else {
 			logger.debug("XML report is empty");
 		}
 		return xmlReports;
@@ -91,10 +91,11 @@ public class FileParsingServiceImpl implements FileParsingService {
 	 */
 	public Optional<Reports> parsingCSV(List<MultipartFile> crvList) {
 		logger.trace("processing inside CSV parsing service");
-		Optional<Reports> csvReports=Optional.empty();
+		Optional<Reports> csvReports = Optional.empty();
 
 		ParsingExpression<List<MultipartFile>, Optional<Reports>> parsing = new ParsingExpression<List<MultipartFile>, Optional<Reports>>() {
 			Reports csvReports = new Reports();
+
 			@Override
 			public Optional<Reports> action(List<MultipartFile> t) throws RaboRuntimeException {
 				return t.stream().map(j -> {
@@ -122,7 +123,7 @@ public class FileParsingServiceImpl implements FileParsingService {
 						reader.close();
 					} catch (IOException e) {
 						logger.error(e.getMessage(), e);
-						throw new RaboRuntimeException(RaboConstants.FILE_IO,RaboConstants.FILE_IO_CODE);
+						throw new RaboRuntimeException(RaboConstants.FILE_IO, RaboConstants.FILE_IO_CODE);
 					}
 					csvReports.setDuplicateRef(validatorService.duplicateReference(statemnets));
 					csvReports.setInvalidEndBanlance(validatorService.invalidEndBalance(statemnets));
@@ -131,10 +132,10 @@ public class FileParsingServiceImpl implements FileParsingService {
 			}
 		};
 
-		Optional<Reports> optionalReports=parsing.action(crvList);
+		Optional<Reports> optionalReports = parsing.action(crvList);
 		if (optionalReports.isPresent()) {
 			csvReports = Optional.ofNullable(optionalReports.get());
-		}else{
+		} else {
 			logger.debug("CSV report is empty");
 		}
 		return csvReports;

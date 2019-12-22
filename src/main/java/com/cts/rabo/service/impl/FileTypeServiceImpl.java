@@ -55,21 +55,21 @@ public class FileTypeServiceImpl implements FileTypeService {
 							|| p.getContentType().equals(RaboConstants.APP_XML))
 					.collect(Collectors.toList());
 
-			Optional<Reports> xmlReports=fileParsingService.parsingXML(xmlLst);
+			Optional<Reports> xmlReports = fileParsingService.parsingXML(xmlLst);
 			if (xmlReports.isPresent()) {
 				reports = xmlReports.get();
-				logger.info("XML reports {} ",reports);
-			}else {
+				logger.info("XML reports {} ", reports);
+			} else {
 				logger.debug("No reports generated from XML");
 			}
 
-			Optional<Reports> csvReports=fileParsingService.parsingCSV(crvList);
+			Optional<Reports> csvReports = fileParsingService.parsingCSV(crvList);
 			if (csvReports.isPresent()) {
 				Reports csvReport = csvReports.get();
 				logger.info("CSV reports {} ", csvReport);
 				reports.getDuplicateRef().addAll(csvReport.getDuplicateRef());
 				reports.getInvalidEndBanlance().addAll(csvReport.getInvalidEndBanlance());
-			}else {
+			} else {
 				logger.debug("No reports generated from CSV");
 			}
 		} else {
