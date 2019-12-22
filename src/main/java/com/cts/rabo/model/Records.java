@@ -1,5 +1,7 @@
 package com.cts.rabo.model;
 
+import java.util.Arrays;
+
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
@@ -10,14 +12,16 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
  *
  */
 @JacksonXmlRootElement(localName = "records")
-public class Records
-{
+public class Records {
 	@JacksonXmlProperty(localName = "record")
 	@JacksonXmlElementWrapper(useWrapping = false)
-    private StatementRecords[] statementRecords;
+	private StatementRecords[] statementRecords;
 
+	public Records() {
+		// default constructor
+	}
 
-    public StatementRecords[] getStatementRecords() {
+	public StatementRecords[] getStatementRecords() {
 		return statementRecords;
 	}
 
@@ -25,11 +29,8 @@ public class Records
 		this.statementRecords = statementRecords;
 	}
 
-
 	@Override
-    public String toString()
-    {
-        return "ClassPojo [record = "+statementRecords.toString()+"]";
-    }
+	public String toString() {
+		return "ClassPojo [record = " + Arrays.toString(statementRecords) + "]";
+	}
 }
-	

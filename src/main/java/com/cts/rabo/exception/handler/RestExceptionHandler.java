@@ -9,15 +9,15 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import com.cts.rabo.constants.RaboConstants;
-import com.cts.rabo.model.exception.ApiErrorResponse;
-import com.cts.rabo.model.exception.RaboFileFormatException;
-import com.cts.rabo.model.exception.RaboRuntimeException;
+import com.cts.rabo.exception.RaboFileFormatException;
+import com.cts.rabo.exception.RaboRuntimeException;
+import com.cts.rabo.model.ApiErrorResponse;
 
 /**
  * 
  * @author ilankumaran
  *
- * Custom response handler when exception occurs.
+ *         Custom response handler when exception occurs.
  */
 @RestControllerAdvice
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {
@@ -33,9 +33,9 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 	public ResponseEntity<ApiErrorResponse> invalidFileException(RaboFileFormatException e, WebRequest request) {
 		ApiErrorResponse apiErrorResponse = new ApiErrorResponse();
 		apiErrorResponse.setMessage(e.getMessage());
-		apiErrorResponse.setError(RaboConstants.fileFormatMsg);
+		apiErrorResponse.setError(RaboConstants.FILE_FORMATING_MSG);
 		apiErrorResponse.setStatus(HttpStatus.FORBIDDEN);
-		return new ResponseEntity<ApiErrorResponse>(apiErrorResponse, HttpStatus.OK);
+		return new ResponseEntity<>(apiErrorResponse, HttpStatus.OK);
 	}
 
 	/**
@@ -49,9 +49,9 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 	public ResponseEntity<ApiErrorResponse> raboException(RaboRuntimeException e, WebRequest request) {
 		ApiErrorResponse apiErrorResponse = new ApiErrorResponse();
 		apiErrorResponse.setMessage(e.getMessage());
-		apiErrorResponse.setError(RaboConstants.fileParsingMsg);
+		apiErrorResponse.setError(RaboConstants.FILE_PARSING_MSG);
 		apiErrorResponse.setStatus(HttpStatus.FORBIDDEN);
-		return new ResponseEntity<ApiErrorResponse>(apiErrorResponse, HttpStatus.OK);
+		return new ResponseEntity<>(apiErrorResponse, HttpStatus.OK);
 	}
 
 	/**
@@ -66,9 +66,9 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 	public ResponseEntity<ApiErrorResponse> globalException(Throwable e, WebRequest request) {
 		ApiErrorResponse apiErrorResponse = new ApiErrorResponse();
 		apiErrorResponse.setMessage(e.getMessage());
-		apiErrorResponse.setError(RaboConstants.unExpectedMsg);
+		apiErrorResponse.setError(RaboConstants.UN_EEXPECTED_MSG);
 		apiErrorResponse.setStatus(HttpStatus.INTERNAL_SERVER_ERROR);
-		return new ResponseEntity<ApiErrorResponse>(apiErrorResponse, HttpStatus.OK);
+		return new ResponseEntity<>(apiErrorResponse, HttpStatus.OK);
 	}
 
 }

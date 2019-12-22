@@ -1,5 +1,2 @@
-com/cts/rabo/service/util/ValidatorServiceTest.class
-com/cts/rabo/exception/ControllerAdviseTest.class
-com/cts/rabo/service/util/FileParsingServiceTest.class
-com/cts/rabo/controller/StatementcontrollerTest.class
-com/cts/rabo/service/util/FileParsingNegativeTest.class
+com/cts/rabo/controller/ControllerTest.class
+com/cts/rabo/service/ServiceTest.class

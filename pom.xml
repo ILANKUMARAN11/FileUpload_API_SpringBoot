@@ -78,41 +78,39 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
-			<!-- <plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.7.9</version>
-				<executions>
-					<execution>
-						<id>prepare-agent</id>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>report</id>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>report</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>post-unit-test</id>
-						<phase>test</phase>
-						<goals>
-							<goal>report</goal>
-						</goals>
-						<configuration>
-							Sets the path to the file which contains the execution data.
+<!--			<plugin>-->
+<!--				<groupId>org.jacoco</groupId>-->
+<!--				<artifactId>jacoco-maven-plugin</artifactId>-->
+<!--				<version>0.7.9</version>-->
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<id>prepare-agent</id>-->
+<!--						<goals>-->
+<!--							<goal>prepare-agent</goal>-->
+<!--						</goals>-->
+<!--					</execution>-->
+<!--					<execution>-->
+<!--						<id>report</id>-->
+<!--						<phase>prepare-package</phase>-->
+<!--						<goals>-->
+<!--							<goal>report</goal>-->
+<!--						</goals>-->
+<!--					</execution>-->
+<!--					<execution>-->
+<!--						<id>post-unit-test</id>-->
+<!--						<phase>test</phase>-->
+<!--						<goals>-->
+<!--							<goal>report</goal>-->
+<!--						</goals>-->
+<!--						<configuration>-->
 
-							<dataFile>target/jacoco.exec</dataFile>
-							Sets the output directory for the code coverage report.
-							<outputDirectory>target/jacoco-ut</outputDirectory>
-						</configuration>
-					</execution>
-				</executions>
+<!--							<dataFile>target/jacoco.exec</dataFile>-->
+<!--							<outputDirectory>target/jacoco-ut</outputDirectory>-->
+<!--						</configuration>-->
+<!--					</execution>-->
+<!--				</executions>-->
 
-			</plugin> -->
+<!--			</plugin>-->
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -138,38 +136,38 @@
 
 
 
-	<!-- <profiles>
-		<profile>
-			<id>sonar</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<properties>
-				<sonar.host.url>http://localhost:9000</sonar.host.url>
-				<sonar.projectName>rabobank</sonar.projectName>
-				<sonar.projectVersion>1.0</sonar.projectVersion>
-				<sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
-				<sonar.exclusions>
-					**/*RabobankApplication.java,
-					/src/main/java/com/cts/rabo/model/**/*,
-					/src/main/java/com/cts/rabo/exception/ApiErrorResponse.java,
-					/src/main/java/com/cts/rabo/exception/RaboRuntimeException.java
-				</sonar.exclusions>
-				<sonar.java.source>1.8</sonar.java.source>
-				<sonar.java.binaries>tagert/classes</sonar.java.binaries>
-			</properties>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.codehaus.sonar</groupId>
-						<artifactId>sonar-maven-plugin</artifactId>
-						<version>3.5.1</version>
-					</plugin>
-				</plugins>
-			</build>
+<!--	<profiles>-->
+<!--		<profile>-->
+<!--			<id>sonar</id>-->
+<!--			<activation>-->
+<!--				<activeByDefault>true</activeByDefault>-->
+<!--			</activation>-->
+<!--			<properties>-->
+<!--				<sonar.host.url>http://localhost:9000</sonar.host.url>-->
+<!--				<sonar.projectName>rabobank</sonar.projectName>-->
+<!--				<sonar.projectVersion>1.0</sonar.projectVersion>-->
+<!--				<sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>-->
+<!--				<sonar.exclusions>-->
+<!--					**/*RabobankApplication.java,-->
+<!--					/src/main/java/com/cts/rabo/model/**/*,-->
+<!--					/src/main/java/com/cts/rabo/exception/ApiErrorResponse.java,-->
+<!--					/src/main/java/com/cts/rabo/exception/RaboRuntimeException.java-->
+<!--				</sonar.exclusions>-->
+<!--				<sonar.java.source>1.8</sonar.java.source>-->
+<!--				<sonar.java.binaries>tagert/classes</sonar.java.binaries>-->
+<!--			</properties>-->
+<!--			<build>-->
+<!--				<plugins>-->
+<!--					<plugin>-->
+<!--						<groupId>org.codehaus.sonar</groupId>-->
+<!--						<artifactId>sonar-maven-plugin</artifactId>-->
+<!--						<version>3.5.1</version>-->
+<!--					</plugin>-->
+<!--				</plugins>-->
+<!--			</build>-->
 
-		</profile>
+<!--		</profile>-->
 
-	</profiles> -->
+<!--	</profiles>-->
 
 </project>

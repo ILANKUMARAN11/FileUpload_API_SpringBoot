@@ -1,13 +1,11 @@
 package com.cts.rabo.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.web.multipart.MultipartFile;
 
-import com.cts.rabo.model.CsvReport;
-import com.cts.rabo.model.StatementResponse;
-import com.cts.rabo.model.XmlReport;
-
+import com.cts.rabo.model.Reports;
 
 /**
  * 
@@ -15,26 +13,20 @@ import com.cts.rabo.model.XmlReport;
  *
  */
 public interface FileParsingService {
-	
+
+
 	/**
 	 * 
-	 * @param multipartFiles Splitting XML and CSV. 
-	 * @return Duplicate reference and invalid end balance from XML and CSV.
+	 * @param xmlLst List of MultiPart File as xmlList.
+	 * @return return reports of XML.
 	 */
-	StatementResponse divideFileType(List<MultipartFile> multipartFiles);
-	
+	Optional<Reports> parsingXML(List<MultipartFile> xmlLst);
+
 	/**
 	 * 
-	 * @param xmlLst List of XML files parsing.
-	 * @return Duplicate reference and invalid end balance from XML.
+	 * @param crvList List of MultiPart File as crvList.
+	 * @return return reports of CSV.
 	 */
-	List<XmlReport> parsingXML(List<MultipartFile> xmlLst);
-	
-	/**
-	 * 
-	 * @param crvList List of CSV files parsing.
-	 * @return Duplicate reference and invalid end balance from CSV.
-	 */
-	List<CsvReport> parsingCSV(List<MultipartFile> crvList);
+	Optional<Reports> parsingCSV(List<MultipartFile> crvList);
 
 }

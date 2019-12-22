@@ -1,6 +1,6 @@
 package com.cts.rabo.function;
 
-import com.cts.rabo.model.exception.RaboRuntimeException;
+import com.cts.rabo.exception.RaboRuntimeException;
 
 /**
  * 
@@ -10,14 +10,14 @@ import com.cts.rabo.model.exception.RaboRuntimeException;
  * @param <R> out of Statements pojo.
  */
 @FunctionalInterface
-public interface ParsingExpression<T,R> {
-	
+public interface ParsingExpression<T, R> {
+
 	/**
 	 * 
-	 * @param t 
+	 * @param t
 	 * @return
 	 * @throws RaboRuntimeException
 	 */
-	R action(T t) throws RaboRuntimeException;
+	R action(T t);
 
 }

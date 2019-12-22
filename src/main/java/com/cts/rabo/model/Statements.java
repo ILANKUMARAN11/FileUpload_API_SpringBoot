@@ -21,6 +21,7 @@ public class Statements {
 	private String description;
 
 	public Statements() {
+		// default constructor
 	}
 
 	public Statements(BigDecimal refrence, String description) {
@@ -44,4 +45,11 @@ public class Statements {
 		this.description = description;
 	}
 
+	@Override
+	public String toString() {
+		return "Statements{" +
+				"refrence=" + refrence +
+				", description='" + description + '\'' +
+				'}';
+	}
 }

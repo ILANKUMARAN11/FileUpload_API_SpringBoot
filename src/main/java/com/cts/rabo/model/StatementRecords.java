@@ -21,16 +21,16 @@ public class StatementRecords {
 	private String description;
 
 	@JacksonXmlProperty(localName = "startBalance")
-	private Double startBalance;
+	private BigDecimal startBalance;
 
 	@JacksonXmlProperty(localName = "mutation")
-	private Double mutation;
+	private BigDecimal mutation;
 
 	@JacksonXmlProperty(localName = "endBalance")
-	private Double endBalance;
+	private BigDecimal endBalance;
 
-	public StatementRecords(BigDecimal refrence, String accountNo, String description, Double startBalance,
-			Double mutation, Double endBalance) {
+	public StatementRecords(BigDecimal refrence, String accountNo, String description, BigDecimal startBalance,
+			BigDecimal mutation, BigDecimal endBalance) {
 		this.refrence = refrence;
 		this.accountNo = accountNo;
 		this.description = description;
@@ -40,6 +40,7 @@ public class StatementRecords {
 	}
 
 	public StatementRecords() {
+		// default constructor
 	}
 
 	public BigDecimal getRefrence() {
@@ -66,27 +67,27 @@ public class StatementRecords {
 		this.description = description;
 	}
 
-	public Double getStartBalance() {
+	public BigDecimal getStartBalance() {
 		return startBalance;
 	}
 
-	public void setStartBalance(Double startBalance) {
+	public void setStartBalance(BigDecimal startBalance) {
 		this.startBalance = startBalance;
 	}
 
-	public Double getMutation() {
+	public BigDecimal getMutation() {
 		return mutation;
 	}
 
-	public void setMutation(Double mutation) {
+	public void setMutation(BigDecimal mutation) {
 		this.mutation = mutation;
 	}
 
-	public Double getEndBalance() {
+	public BigDecimal getEndBalance() {
 		return endBalance;
 	}
 
-	public void setEndBalance(Double endBalance) {
+	public void setEndBalance(BigDecimal endBalance) {
 		this.endBalance = endBalance;
 	}
 
