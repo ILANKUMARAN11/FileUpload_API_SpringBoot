@@ -59,8 +59,6 @@ public class FileTypeServiceImpl implements FileTypeService {
 			if (xmlReports.isPresent()) {
 				reports = xmlReports.get();
 				logger.info("XML reports {} ", reports);
-			} else {
-				logger.debug("No reports generated from XML");
 			}
 
 			Optional<Reports> csvReports = fileParsingService.parsingCSV(crvList);
@@ -69,8 +67,6 @@ public class FileTypeServiceImpl implements FileTypeService {
 				logger.info("CSV reports {} ", csvReport);
 				reports.getDuplicateRef().addAll(csvReport.getDuplicateRef());
 				reports.getInvalidEndBanlance().addAll(csvReport.getInvalidEndBanlance());
-			} else {
-				logger.debug("No reports generated from CSV");
 			}
 		} else {
 			logger.debug("Not a CSV or XML file format");

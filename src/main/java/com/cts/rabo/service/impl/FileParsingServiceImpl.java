@@ -78,8 +78,6 @@ public class FileParsingServiceImpl implements FileParsingService {
 		Optional<Reports> optionalReports = parsing.action(xmlLst);
 		if (optionalReports.isPresent()) {
 			xmlReports = Optional.ofNullable(optionalReports.get());
-		} else {
-			logger.debug("XML report is empty");
 		}
 		return xmlReports;
 	}
@@ -135,8 +133,6 @@ public class FileParsingServiceImpl implements FileParsingService {
 		Optional<Reports> optionalReports = parsing.action(crvList);
 		if (optionalReports.isPresent()) {
 			csvReports = Optional.ofNullable(optionalReports.get());
-		} else {
-			logger.debug("CSV report is empty");
 		}
 		return csvReports;
 	}
